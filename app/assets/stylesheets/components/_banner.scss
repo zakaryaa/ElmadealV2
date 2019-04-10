@@ -1,0 +1,112 @@
+.banner {
+  background-image: linear-gradient(-225deg, rgba(238, 248, 243, 1) 0%, rgba(23, 57, 84, 0.4) 50%),image-url("test.PNG");
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  height: 350px;
+  flex-direction: column;
+  text-align: center;
+}
+.banner-content {
+  @media only screen and (max-width: 768px) {
+      margin-bottom: 140px;
+      h1 {
+        font-size: 30px;
+      }
+  }
+  h1 {
+    color: $elma-light-green;
+    font-size: 50px;
+  }
+}
+.form-control-style {
+  background-color: rgba(238, 248, 243, 1);
+  width: 150px !important;
+  height: 50px;
+  float: none !important;
+  font-family: "Montserrat";
+  font-size: 18px;
+  margin: 0px;
+  @media only screen and (max-width: 768px) {
+    margin: 0px;
+  }
+}
+
+.input-group {
+  margin: 0 auto;
+  width: 600px;
+  .input-group-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+}
+
+.btn-search-service {
+  @media only screen and (max-width: 768px) {
+      width: 150px;
+      margin-bottom: 0px;
+    }
+   margin-bottom: 12px;
+  color: $elma-light-green;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-weight: lighter;
+  font-size: 20px;
+  background: $elma-green;
+  transition: background 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: inline-block;
+  height: 50px;
+  &:hover {
+    opacity: 1;
+    background: rgba(249, 69, 91, 0.8);
+    text-decoration: none;
+    color: $elma-light-green;
+    border: none;
+  }
+  &:focus {
+    color: $elma-light-green;
+  }
+}
+
+.btn-search {
+  @media only screen and (max-width: 768px) {
+    width: 150px;
+  }
+  color: $elma-light-green;
+  padding: 10px 15px;
+  border-radius: 0 5px 5px 0;
+  background: $elma-green;
+  transition: background 0.3s ease;
+  min-width: 50px;
+  height: 100%;
+  &:hover {
+    opacity: 1;
+    background: rgba(249, 69, 91, 0.8);
+    text-decoration: none;
+    color: $elma-light-green;
+    border: none;
+  }
+  &:focus {
+    color: $elma-light-green;
+  }
+}
+
+.home-search-form {
+  height: 50px;
+  display: flex;
+  @media only screen and (max-width: 768px) {
+    .col-xs-8 {
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+
+    }
+  }
+}

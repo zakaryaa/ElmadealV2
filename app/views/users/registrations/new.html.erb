@@ -1,0 +1,30 @@
+<div class="log-container-up">
+    <div id="login-box">
+        <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name),html: {class: "form-signin"}) do |f|  %>
+        <%= f.error_notification %>
+        <h2 class="form-signup-heading">Veuillez vous inscrire</h2>
+        <div class="form-inputs form-inputs-style">
+            <%= f.input :first_name, required: true, autofocus: true,
+             placeholder: "Entrer votre prénom",
+             label: 'Prenom(*)'%>
+            <%= f.input :last_name,required: true, autofocus: true,
+             placeholder: "Entrer votre nom",
+             label: 'Nom(*)'%>
+            <%= f.input :phone_number, required: true, autofocus: true,label: 'Téléphone(*)',
+            placeholder: "Entrer votre mot numéro de téléphone",
+            :input_html => { :class => 'form-control bfh-phone', 
+              'data-format'=>'+221 dd-ddd-dd-dd' } %>
+            <%= f.input :address, required: true    , label: 'Adresse(*)'%>
+            <%= f.input :email, required: false, 
+            placeholder: "Entrer votre adresse email",
+            label: 'Email', input_html: {class: 'form-control' } %>
+            <%= f.hidden_field :password, value: 'elmadeal' %>
+            <label class="checkbox"></label>
+            <%= f.input :remember_me,label: 'Se souvenir de moi', as: :boolean if devise_mapping.rememberable? %>
+            <div class="form-actions">
+                <%= f.button :submit,"S'incrire",class: 'btn btn-treehouse'  %>
+            </div>
+        </div>
+        <% end %>
+    </div>
+</div>

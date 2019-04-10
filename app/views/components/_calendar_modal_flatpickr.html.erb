@@ -1,0 +1,70 @@
+<div class="modal fade booking-modal" id="bookingModal" tabindex="-1" role="dialog" aria-labelledby="bookingModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title text-center" id="bookingModalLabel">Edit an appointment 📅</h3>
+      </div>
+      <form id="booking-form" class="form-horizontal">
+        <div class="modal-body">
+          <div class="form-group">
+            <label class="col-sm-2 control-label" for="title">Categorie</label>
+            <div class="col-sm-10">
+              <select class="form-control" name="category" id="serviceId">
+                <option value=""></option>
+                <% @categories.each do |category| %>
+                  <option value="<%= category[0] %>"><%= category[0] %> (<%= category[1]%>) </option>
+                <% end %>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-2 control-label" for="title">Services</label>
+            <div class="col-sm-10">
+              <select class="form-control" name="service_id" id="serviceId">
+                <option value=""></option>
+                <% @services.each do |service| %>
+                  <option value="<%= service.id %>"><%= service.name %></option>
+                <% end %>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-2 control-label" for="title">Date</label>
+            <div class="col-sm-10">
+              <input type="hidden" name="start_appointment" id="time-picker" value="">
+              <input class="form-control" type="text" id="start_appointment" name="" value="" disabled>
+            </div>
+          </div>
+          <hr>
+          <div class="form-group">
+            <label class="col-sm-2 control-label" for="title">Nom</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" name="last_name" placeholder="Nom">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-2 control-label" for="title">Prenom</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" name="first_name" placeholder="Prenom">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-2 control-label" for="title">Adresse</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" name="address" placeholder="Adresse">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-2 control-label" for="title">Telephone</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" name="phone_number" placeholder="Telephone">
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="submit" class="btn btn-primary">Confirm booking</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

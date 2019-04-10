@@ -1,0 +1,112 @@
+<div class="navbar">
+  <!-- Logo -->
+  <%= link_to root_path, class: "navbar-wagon-brand" do %>
+    <%= image_tag("Elmadeal-logo-base.png", {:style => "width:215px;"}) %>
+  <% end %>
+  <div class="controls">
+    <div class="navbar-wagon-right hidden-xs hidden-sm">
+      <% if user_signed_in? %>
+        <a href="" class="navbar-wagon-item navbar-wagon-link"></a>
+        <a href="" class="navbar-wagon-item navbar-wagon-link"><i class="far fa-envelope"></i></a>
+        <a href="" class="navbar-wagon-item navbar-wagon-link"><i class="far fa-bell" style="size:7x"></i></a>
+
+        <!-- Avatar with dropdown menu -->
+        <div class="navbar-wagon-item">
+          <div class="dropdown">
+             <%= image_tag "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuVxdq8U1McJjOtGQ44aEo7fosoXd4YcV3ANauGcm3BypF-xZqnA", class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
+            <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
+              <li>
+                <%= link_to "#" do %>
+                  <i class="fa fa-user"></i> <%= t(".profile", default: "Profile") %>
+                <% end %>
+              </li>
+              <li>
+                <%= link_to "#" do %>
+                  <i class="fa fa-cog"></i>  <%= t(".settings", default: "Settings") %>
+                <% end %>
+              </li>
+              <li>
+                <%= link_to destroy_user_session_path, method: :delete do %>
+                  <i class="fa fa-sign-out"></i>  <%= t(".sign_out", default: "Se déconnecter") %>
+                <% end %>
+              </li>
+            </ul>
+          </div>
+        </div>
+      <% else %>
+      <!-- Login link (when logged out) -->
+      <%= link_to t(".sign_up", default: "Sign Up"), new_user_registration_path, class: "navbar-wagon-item navbar-wagon-link", style: "margin-right: 30px" %>
+      <%= link_to t("#", default: "Salon login"), new_user_session_path + "?position=owner", class: "navbar-wagon-link btn-treehouse btn-treehouse:hover", id: "owner" %>
+      <% end %>
+    </div>
+    <div data-icon="ei-bell" data-size="m"></div>
+    <div data-icon="ei-envelope" data-size="m"></div>
+    <div class="navbar-wagon-item hidden-md hidden-lg">
+      <div class="dropdown">
+        <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
+        <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
+          <li><a href="#">Some mobile link</a></li>
+          <li><a href="#">Other one</a></li>
+          <li><a href="#">Other one</a></li>
+        </ul>
+      </div>
+    </div>
+    <!-- <div class="image-wrapper">
+      <img src="http://www.purplestrategies.com/wp-content/uploads/2014/04/placeholder_male@2x.png" alt="profile picture">
+    </div> -->
+    <div data-icon="ei-chevron-down" data-size="m"></div>
+  </div>
+</div>
+
+
+
+<div class="admin-panel">
+  <div class="row-app">
+    <div class="col-4">
+      <div class="slidebar">
+        <div class="sidebar-header">
+          <h3>Elmabook</h3>
+        </div>
+        <ul>
+          <li id="<%= active_class?(dashboard_path) %>">
+            <%= link_to dashboard_path, name: "tab1" do %>
+              <i class="fa fa-tachometer-alt"></i>Dashboard
+            <% end %>
+
+          </li>
+          <li id="<%= active_class?(calendar_path) %>">
+            <%= link_to calendar_path, name: "tab2" do %>
+              <i class="fa fa-calendar-alt"></i>Calendar
+            <% end %>
+          </li>
+
+          <li id="<%= active_class?(clients_path) %>">
+            <%= link_to clients_path, name: "tab3" do %>
+              <i class="fa fa-users"></i>Clients
+            <% end %>
+          </li>
+
+          <li id="<%= active_class?(staff_path) %>">
+            <%= link_to staff_path, name: "tab4" do %>
+              <i class="fa fa-user"></i>Staff
+            <% end %>
+          </li>
+
+          <li id="<%= active_class?(services_path) %>">
+            <%= link_to services_path, name: "tab5" do %>
+              <i class="fa fa-business-time"></i>Services
+            <% end %>
+          </li>
+
+          <li id="<%= active_class?(setup_path) %>">
+            <%= link_to setup_path, name: "tab6" do %>
+              <i class="fa fa-wrench"></i>Advanced
+            <% end %>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+

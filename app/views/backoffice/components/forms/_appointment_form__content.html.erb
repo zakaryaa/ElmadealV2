@@ -1,0 +1,148 @@
+<div class="content">
+  <!-- Form: start -->
+  <div class="ui large form" id="appointment-form">
+
+   
+    <h4 class="ui dividing header" style="box-shadow: none;">Informations RDV</h4>
+    <!-- Service: start -->
+    <div class="field">
+      <div class="three fields">
+        <div class="required field">
+          <label>Employées</label>
+          <div class="ui selection dropdown search employee-name--js">
+            <input type="hidden" name="employee_id">
+            <i class="dropdown icon"></i>
+            <div class="default text">Employées</div>
+          </div>
+        </div>
+
+        <div class="required field">
+          <label>Catégories</label>
+          <div class="ui selection dropdown search service-category--js">
+            <input type="hidden" name="service_category">
+            <i class="dropdown icon"></i>
+            <div class="text">Catégories</div>
+          </div>
+        </div>
+
+        <div class="required field">
+          <label>Services</label>
+          <div class="ui selection dropdown search service-name--js">
+            <input type="hidden" name="service_id">
+            <i class="dropdown icon"></i>
+            <div class="default text">Services</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <!-- Service: end -->
+
+    <!-- Status: start -->
+    <div class="inline fields">
+      <label class="required">Status</label>
+      <div class="field">
+        <div class="ui radio checkbox">
+          <input type="radio" name="status" value="À valider" checked="checked">
+          <label>En Attente</label>
+        </div>
+      </div>
+      <div class="field">
+        <div class="ui radio checkbox">
+          <input type="radio" name="status" value="En cours">
+          <label>En Cours</label>
+        </div>
+      </div>
+      <div class="field">
+        <div class="ui radio checkbox">
+            <input type="radio" name="status" value="Validé">
+            <label>Validé</label>
+        </div>
+      </div>
+      <div class="field">
+        <div class="ui radio checkbox">
+            <input type="radio" name="status" value="Terminé">
+            <label>Terminé</label>
+        </div>
+      </div>
+    </div>
+    <!-- Status: start -->
+
+    <!-- Date: start -->
+    <div class="field">
+      <div class="two fields">
+
+        <div class="required field">
+          <label>Date</label>
+          <div class="ui calendar date-calendar--js">
+            <div class="ui input left icon">
+              <i class="calendar icon"></i>
+              <input type="hidden" name="date">
+              <input type="text" placeholder="Date">
+            </div>
+          </div>
+        </div>
+
+        <div class="required field">
+          <label>Heure</label>
+          <div class="ui calendar time-calendar--js">
+            <div class="ui input left icon">
+              <i class="time icon"></i>
+              <input type="hidden" name="time">
+              <input type="text" placeholder="Time" data-validate="time_validate">
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <!-- Date: end -->
+     <!-- Name: start -->
+     <h4 class="ui dividing header" style="box-shadow: none;">Informations Client</h4>
+     <div class="field">
+       <div class="fields">
+ 
+         <div class="five wide required field">
+           <label>Prénom</label>
+           <input type="text" name="first_name" placeholder="Prénom">
+         </div>
+ 
+         <div class="five wide required field">
+           <label>Nom</label>
+           <input type="text" name="last_name" placeholder="Prénom">
+         </div>
+ 
+         <div class="six wide field required field">
+           <label>Téléphone</label>
+           <div class="ui labeled input">
+             <div class="ui blue label">
+               +221
+             </div>
+             <input type="text" name="phone_number" placeholder="Phone Number">
+           </div>
+         </div>
+ 
+       </div>
+     </div>
+     <!-- Name: end -->
+ 
+ 
+     <!-- Extra: start -->
+     <div class="field">
+       <div class="fields">
+ 
+         <div class="five wide field">
+             <label>Adresse</label>
+             <input type="text" name="address" placeholder="Adresse">
+         </div>
+ 
+         <div class="six wide field">
+             <label>Email</label>
+             <input type="email" name="email" placeholder="Email">
+         </div>
+       </div>
+     </div>
+
+  </div>
+  <!-- Form: end -->
+</div>

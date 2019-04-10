@@ -1,0 +1,53 @@
+.modal-content {
+  padding-top: 20px;
+}
+.modal-header {
+  padding: 30px;
+  border-bottom: 2px solid $elma-red;
+  h3 {
+    font-weight: bolder;
+    color: $elma-dark-blue;
+  }
+}
+.modal-body {
+  padding: 30px 15px;
+}
+.modal-footer {
+  button {
+    background-color: $elma-dark-blue;
+    border-color: $elma-dark-blue;
+    display: block;
+    width: 100%;
+    transition: all ease-out 200ms;
+    &:hover {
+      background: $elma-red;
+      color: white;
+      border-color: $elma-red;
+    }
+  }
+}
+
+// Override bootstrap datepicker
+.datepicker {
+  font-weight: lighter !important;
+}
+.bootstrap-datetimepicker-widget table td.active, .bootstrap-datetimepicker-widget table td.active:hover {
+  background: $elma-red !important;
+}
+.bootstrap-datetimepicker-widget a[data-action] {
+  background: $elma-dark-blue;
+  &:hover, &:focus {
+    outline: none !important;
+    color: white !important;
+    border: none !important;
+  }
+}
+.bootstrap-datetimepicker-widget table td span:hover {
+  background: transparent !important;
+}
+.bootstrap-datetimepicker-widget table td.today:before {
+  display: none !important;
+}
+.bootstrap-datetimepicker-widget table td {
+  width: 0 !important;
+}

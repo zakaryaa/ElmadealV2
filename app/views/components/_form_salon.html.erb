@@ -1,0 +1,29 @@
+<%= simple_form_for(salon, :html => { :multipart => true }) do |f| %>
+  <br>
+  <h4 class = "title-dest-black">Salon Information</h4>
+  <br>
+  <hr>
+    <%= f.input :name %>
+    <%= f.input :address %>
+    <%= f.input :description, as: :text %>
+
+  <br>
+  <h4 class = "title-dest-black">Add Your Photos</h4>
+  <br>
+    <%= f.simple_fields_for :salon do |p| %>
+        <%= p.file_field :photo, :multiple => true, name: "photos[photo][]" %>
+    <% end %>
+
+
+  <br>
+  <hr>
+  <br>
+  <h4 class="title-dest-black">Choose Your Services</h4>
+  <br>
+  <hr>
+
+  <div class="text-center">
+    <%= f.button :submit, class: 'btn btn-create' %>
+  </div>
+  <br>
+<% end %>

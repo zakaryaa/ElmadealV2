@@ -1,0 +1,23 @@
+<nav class="nav">
+    <button class="hamburger hamburger-js">
+        <i class="align left icon"></i>
+    </button>
+
+    <div class="ui teal ">
+    <div data-salon-id="<%= @salon.id %>" class="ui basic button floating dropdown dropdown-btn-js">
+			<div class="text"><%= @salon.name %></div>
+			<i class="icon dropdown"></i>
+      <div class="menu">
+				<% @salons.each do |salon| %>
+        <a class="item" style="padding: 18px 40px 18px 16px!important;font-size:16px;" href="<%= dashboard_path(salon.id) %>"><%= salon.name %></a>
+				<% end %>
+        <div class="item" style="padding: 18px 40px 18px 16px!important;font-size:16px;">
+             <%= link_to destroy_user_session_path, method: :delete do %>
+          <i class="sign out alternate icon"></i>
+          <%= t(".sign_out", default: "Se déconnecter") %>
+          <% end %>
+				</div>
+      </div>
+    </div>
+  </div>
+</nav>

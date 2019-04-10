@@ -1,0 +1,97 @@
+<%= render "shared/banner" %>
+<div class="container">
+  <div class="l-constrain">
+    <div class="container-fluid">
+      <h2 class="text-center">Nos meilleurs <strong id="red-word">offres beaute </strong> proche de <strong id="red-word">chez
+          vous</strong> </h2>
+      <div class="grid">
+        <div class="grid__row">
+          <div class="flex-column">
+            <div class="card" id="card-categorie">
+              <a href="/salons?category=Coiffure" class="card__link">
+                <span class="card__type"></span>
+                <div class="card__content">
+                  <span class="card__title">Coiffure</span>
+                </div>
+                <div class="card__image_coiffure">
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="flex-column">
+            <div class="card">
+              <a href="/salons?category=Mains+%26+Pieds" class="card__link">
+                <span class="card__type"></span>
+                <div class="card__content">
+                  <span class="card__title">Manicure & Pedicure</span>
+                </div>
+                <div class="card__image_mani-pedi"></div>
+              </a>
+            </div>
+          </div>
+          <div class="flex-column">
+            <div class="card">
+              <a href="/salons?category=Massage" class="card__link">
+                <span class="card__type"></span>
+                <div class="card__content">
+                  <span class="card__title">Massage</span>
+                </div>
+                <div class="card__image_massage"></div>
+              </a>
+            </div>
+          </div>
+          <div class="flex-column">
+            <div class="card">
+              <a href="/salons?category=Visage" class="card__link">
+                <span class="card__type"></span>
+                <div class="card__content">
+                  <span class="card__title">Visage</span>
+                </div>
+                <div class="card__image_visage"></div>
+              </a>
+            </div>
+          </div>
+          <div class="flex-column">
+            <div class="card">
+              <a href="/salons?category=Epilation" class="card__link">
+                <span class="card__type"></span>
+                <div class="card__content">
+                  <span class="card__title">Epilation</span>
+                </div>
+                <div class="card__image_epilation"></div>
+              </a>
+            </div>
+          </div>
+          <div class="flex-column">
+            <div class="card">
+              <a href="/salons?category=spa" class="card__link">
+                <span class="card__type"></span>
+                <div class="card__content">
+                  <span class="card__title">Spa</span>
+                </div>
+                <div class="card__image_spa"></div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <h2 class="text-center" style="margin-bottom: 20px;margin-top: 10px">Nos meilleurs <strong id="red-word">soins
+        beaute </strong> </h2>
+    <% @salons.each do |salon| %>
+    <div class="col-xs-12 col-md-4">
+      <%= render "shared/card_home", salon: salon %>
+    </div>
+    <% end %>
+  </div>
+</div>
+<section id="blog">
+  <div class="container">
+    <div class="blog-header">
+      <h4> Nous sommes à vos côtés pour vous aider à developper votre salon</h4>
+      <strong>Appelez-nous au +221 78 384 89 22</strong>
+    </div>
+    <button type="button" class="btn-book" style="width: 200px;">
+        <%= link_to "DEVENEZ PARTENAIRE", new_partenaire_path%></button>
+  </div>
+</section>

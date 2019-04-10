@@ -1,0 +1,71 @@
+.btn-treehouse {
+  padding: 10px 15px;
+  border-radius: 4px;
+  font-weight: bold;
+  background: $elma-dark-blue;
+  transition: background 0.3s ease;
+  color: white !important;
+}
+.btn-treehouse:hover {
+  background: $elma-red;
+  text-decoration: none;
+  color: white !important;
+}
+.btn-book {
+  font-size: 15px;
+  color: $elma-red;
+  border: 1px solid $elma-red;
+  padding: 4px 4px;
+  width: 155px;
+  border-radius: 40px;
+  font-weight: lighter;
+  opacity: 0.6;
+  margin: 0 auto;
+  display:block;
+}
+.btn-book:hover {
+  opacity: 1;
+  text-decoration: none;
+  color: $elma-red;
+}
+
+
+
+
+
+.btn-2 {
+    letter-spacing: 0;
+}
+
+.btn-2:hover,
+.btn-2:active {
+  letter-spacing: 5px;
+}
+
+.btn-2:after,
+.btn-2:before {
+  backface-visibility: hidden;
+  border: 1px solid rgba(#fff, 0);
+  bottom: 0px;
+  content: " ";
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  transition: all 280ms ease-in-out;
+  width: 0;
+}
+
+.btn-2:hover:after,
+.btn-2:hover:before {
+  backface-visibility: hidden;
+  border-color: #fff;
+  transition: width 350ms ease-in-out;
+  width: 70%;
+}
+
+.btn-2:hover:before {
+  bottom: auto;
+  top: 0;
+  width: 70%;
+}
+

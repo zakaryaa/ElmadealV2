@@ -1,0 +1,94 @@
+<div class="view dashboard dashboard-js visible">
+  <div class="view--box">
+    <div class="ui fluid equal width left aligned padded grid stackable">
+
+      <div class="sixteen wide tablet four wide computer column">
+        <div class="ui segment left aligned">
+          <div class="ui  statistic">
+            <div class="value counter">
+              <%= @revenues %>
+            </div>
+            <div class="label">
+              Revenus
+            </div>
+            <i class="chart line icon big top-right green"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="sixteen wide tablet four wide computer column">
+        <div class="ui segment left aligned">
+          <div class="ui  statistic">
+            <div class="value counter">
+              <%= @client_count %>
+            </div>
+            <div class="label">
+              Clients
+            </div>
+            <i class="users icon teal big top-right"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="sixteen wide tablet four wide computer column">
+        <div class="ui segment left aligned">
+          <div class="ui  statistic">
+            <div class="value counter">
+              <%= @appointment_done_count %>
+            </div>
+            <div class="label">
+              RDV validés
+            </div>
+            <i class="calendar check outline icon blue big top-right "></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="sixteen wide tablet four wide computer column">
+        <div class="ui segment left aligned">
+          <div class="ui  statistic">
+            <div class="value counter">
+              <%= @appointment_ongoing_count %>
+            </div>
+            <div class="label">
+              RDV en attente
+            </div>
+            <i class="user clock icon orange big top-right "></i>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <table class="ui celled striped table">
+      <thead>
+        <tr>
+          <th>
+            Palmarès services
+          </th>
+          <th>catégorie</th>
+          <th>Prix</th>
+          <th>Nombr de RDV</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @top5_services.each_with_index do |service,i| %>
+        <tr>
+          <td class="collapsing">
+            <%= "##{i+1}" %>
+            <%= service.name %>
+          </td>
+          <td>
+            <%= service.category %>
+          </td>
+          <td>
+            <%= money_without_cents service.price_cents %>  <%= service.money %> 
+          </td>
+          <td>
+            <%= service.appointment_count %>
+          </td>
+        </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>

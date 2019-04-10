@@ -1,0 +1,29 @@
+<div class="modal fade booking-modal" id="bookingModal" tabindex="-1" role="dialog" aria-labelledby="bookingModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title text-center" id="bookingModalLabel">Choisissez une date et une heure pour ce rendez-vous 📅</h3>
+      </div>
+      <%= form_tag({method: "post"}, {id: "customer-booking-form"}) do %>
+        <div class="modal-body">
+          <div class="picker">
+            <div class="flat text-center">
+              <div class="row">
+                <div class="picker">
+                  <div class="form-group col-xs-6" >
+                    <div class='input-group date' id='datetimepicker1'>
+                      <input type="hidden" name="appointment[start_date_time]" id="time-picker">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="submit" class="btn btn-primary">Confirmer Réservation</button>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

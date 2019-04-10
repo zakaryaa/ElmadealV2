@@ -1,0 +1,22 @@
+<div class='hoursWrapper'>
+  <div class="hoursBox">
+    <div class='hoursContent'>
+      <div class='hoursTitle'>
+        <h2>Opening Hours</h2>
+      </div>
+      <hr/>
+      <div> 
+      <% openingHours.each do |openingHour| %>
+      <ul>
+        <div class="hours"> 
+        <li> <%= openingHour.day %> </li> 
+          <div class="hours-right"> 
+        <li> <%= openingHour.start_hour.strftime("%H:%M") %> </li>
+        <li><%= openingHour.end_hour.strftime("%H:%M") %> </li>
+        </div>
+        </ul>
+        <%end%>
+      </div>
+    </div>
+  </div>
+</div>

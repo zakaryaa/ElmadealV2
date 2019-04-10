@@ -1,0 +1,497 @@
+* {
+    // margin: 0;
+    padding: 0;
+    outline: 0;
+    border: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+
+.container-app {
+    height: 100%;
+    width: 100%;
+}
+
+
+// body {
+//     background: #EAEDF1;
+// }
+// div.icon {
+//     cursor: pointer;
+// }
+.dashboard {
+    height: 100%;
+    width: 100%;
+    background-color: #f7f7f8;
+}
+/* Navbar Section  */
+.navbar {
+    display: flex;
+    position: fixed;
+    background: #fff;
+    justify-content: space-between;
+    padding: 5px 0;
+    width: 100%;
+    box-sizing: border-box;
+    box-shadow: 0 1px 25px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+.navbar .title {
+    flex: 1;
+    padding-left: 10px;
+}
+.navbar .title h1 {
+    line-height: 50px;
+}
+.navbar .search {
+    flex: 5;
+}
+.navbar .search .input-wrapper {
+    height: inherit;
+    align-items: flex-start;
+    height: 100%;
+    line-height: 50px;
+}
+.navbar .search .input-wrapper div.icon{
+    margin-bottom: -10px;
+}
+.navbar .search .input-wrapper input{
+    font-size: 12pt;
+    width: 80%;
+    line-height: 50px;
+}
+.navbar .controls {
+    flex: 1;
+    display: flex;
+}
+.navbar .controls .image-wrapper {
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    border-radius: 50%;
+    display: inline-block;
+    flex: 1;
+}
+.navbar .controls .image-wrapper img{
+    width: inherit;
+    height: inherit;
+    border-radius: 50%;
+}
+.navbar div.icon {
+    width: 35px;
+    height: 35px;
+    margin: auto;
+    flex: 1;
+    color: gray;
+}
+
+
+
+/* Main Component */
+p.text-1{
+  color: gray;
+}
+.main-component {
+    box-sizing: border-box;
+    padding-top: 10px;
+    padding-right: 115px;
+    overflow: hidden;
+}
+.main-component .channel-status {
+    transition: 0.25s ease-in-out;
+    // position: relative;
+    padding-left: 150px;
+}
+.main-component .channel-status .platforms h2 {
+    margin-bottom: 1em;
+}
+.main-component .channel-status .platforms ul.platforms-ul {
+    display: flex;
+    list-style: none;
+}
+.main-component .channel-status .platforms ul.platforms-ul li.active {
+    display: inline-flex;
+    height: 75px;
+    flex: 1;
+    margin: 10px;
+    cursor: pointer;
+}
+.main-component .channel-status .platforms ul.platforms-ul li.active div.icon {
+    background: #F5F7FA;
+    height: inherit;
+    padding: 0 10px;
+}
+.main-component .channel-status .platforms ul.platforms-ul li.active .text-1 {
+    background: #337ab7;;
+    padding: 10px 1em;
+    line-height: 25px;
+    width: 100%;
+}
+.main-component .channel-status .platforms ul.platforms-ul li.active .text-1 p.text-1 {
+    font-family: "open sans";
+    color: gray;
+}
+.main-component .channel-status .platforms ul.platforms-ul li.active .text-1 p:nth-child(2) {
+    color: #fff;
+}
+.main-component .channel-status .platforms ul.platforms-ul li.active .text-1 {
+    background: #3B5999;
+    color: gray;
+}
+.main-component .channel-status .platforms ul.platforms-ul li.active .text-1 p:nth-child(2) {
+    color: #fff;
+}
+.main-component .channel-status .platforms ul.platforms-ul li.active div.icon{
+    background: #355089;
+    fill: #fff;
+}
+
+.main-component .channel-status .facebook {
+    display: flex;
+    flex-flow: row wrap;
+}
+.main-component .channel-status .facebook .likes {
+    flex: 1;
+    flex-basis: 30%;
+    background: #fff;
+    margin: 1em;
+    padding: 1em;
+    box-sizing: border-box;
+    box-shadow: 0px 5px 50px lightgray;
+
+}
+.main-component .channel-status .facebook .likes .tabs_rangement ul.second-ul {
+    list-style-type: none;
+    border-bottom: 1px solid lightgray;
+    padding-bottom: 5px;
+}
+.main-component .channel-status .facebook .likes ul.second-ul li.second-li {
+    display: inline-block;
+    margin: 5px 10px;
+}
+.main-component .channel-status .facebook .likes .tabs_rangemen ul.second-ul li.active {
+    font-weight: bold;
+    text-shadow: 0 0 2px rgba(0, 0, 0, 0.2)
+}
+.main-component .channel-status .facebook .likes .data {
+    display: flex;
+    margin: 1.5em;
+    justify-content: space-around;
+}
+.main-component .channel-status .facebook .likes .data .text-1 {
+    flex: 1;
+    margin: auto;
+    text-align: center;
+}
+.main-component .channel-status .facebook .likes .data .text-1 p {
+    color: gray;
+}
+.main-component .channel-status .facebook .likes .data .visual {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+.main-component .channel-status .facebook .likes .data .visual .circle {
+    height: 100px;
+    width: 100px;
+    background: linear-gradient(to top left, #00C9FF , #92FE9D);
+    border-radius: 50%;
+    text-align: center;
+    line-height: 100px;
+    padding: 3px;
+}
+.main-component .channel-status .facebook .likes .data .visual .circle p {
+    background: #fff;
+    font-weight: bold;
+    font-size: 14pt;
+    border-radius: 50%;
+}
+.main-component .channel-status .facebook .publishes {
+    flex: 1;
+    flex-basis: 40%;
+    background: #fff;
+    margin: 1em;
+    padding: 1em;
+    box-sizing: border-box;
+    box-shadow: 0px 5px 50px lightgray;
+
+}
+.main-component .channel-status .facebook .publishes .select > div {
+    cursor: pointer;
+    border-bottom: 1px solid lightgray;
+    padding-bottom: 10px;
+    display: flex;
+    line-height: 25px;
+    position: relative;
+}
+.main-component .channel-status .facebook .publishes .select > div p {
+    display: inline-block;
+}
+.main-component .channel-status .facebook .publishes .select > div ul {
+    list-style: none;
+    background: #ADA996;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    padding: 10px;
+    border-radius: 10px;
+    display: none;
+    animation: slide 0.25s;
+    position: absolute;
+    top: 25px;
+    left: 0;
+}
+.main-component .channel-status .facebook .publishes .select > div ul.second-ul li.second-li {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+}
+.main-component .channel-status .facebook .publishes .select > div ul.second-ul li.active {
+    background: rgba(0, 0, 0, 0.5);
+    margin: -1px -10px;
+    text-align: center;
+}
+.main-component .channel-status .facebook .publishes .data {
+    margin: 1.5em;
+    display: flex;
+}
+.main-component .channel-status .facebook .publishes .data .text-1 {
+    flex: 1;
+    margin: auto;
+}
+.main-component .channel-status .facebook .publishes .data  .text-1 p {
+    color: gray
+}
+.main-component .channel-status .facebook .publishes .data .visual {
+    flex: 1;
+}
+
+.main-component .channel-status .facebook .demography {
+    flex: 1;
+    flex-basis: 40%;
+    background: #fff;
+    margin: 1em;
+    padding: 1em;
+    box-sizing: border-box;
+    box-shadow: 0px 5px 50px lightgray;
+
+}
+.main-component .channel-status .facebook .demography {
+    // height:150px;
+}
+.main-component .channel-status .facebook .demography .text-1 {
+    // font-weight: bold;
+    color: gray;
+}
+.main-component .channel-status .facebook .demography .classifications {
+    display: flex;
+    color: #fff;
+}
+.main-component .channel-status .facebook .demography .classifications .classification {
+    margin: 10px;
+    flex: 1;
+    text-align: center;
+    padding: 20px 0;
+
+}
+.main-component .channel-status .facebook .demography .classifications .classification:nth-child(1) {
+    // background: #2cb6ba;
+    border: 1px solid #e1e1e1;
+    border-radius: 4px;
+}
+.main-component .channel-status .facebook .demography .classifications .classification:nth-child(2) {
+    // background: #00C5DC;
+    border: 1px solid #e1e1e1;
+    border-radius: 4px;
+}
+.main-component .channel-status .facebook .views {
+    flex: 1;
+    flex-basis: 40%;
+    background: #fff;
+    margin: 1em;
+    padding: 1em;
+    box-sizing: border-box;
+    box-shadow: 0px 3px 50px lightgray;
+    color: #fff;
+
+}
+.main-component .channel-status .facebook .views .select > div {
+    cursor: pointer;
+    border-bottom: 1px solid gray;
+    padding-bottom: 10px;
+    display: flex;
+    line-height: 25px;
+    position: relative
+}
+.main-component .channel-status .facebook .views .select > div p.text-1 {
+    display: inline-block;
+}
+.main-component .channel-status .facebook .views .select > div ul {
+    list-style: none;
+    background: #673AB7;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #512DA8, #673AB7);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #512DA8, #673AB7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    padding: 10px;
+    border-radius: 10px;
+    display: none;
+    animation: slide 0.25s;
+    position: absolute;
+    top: 25px;
+    left: 0;
+}
+.main-component .channel-status .facebook .views .select > div ul li {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+}
+.main-component .channel-status .facebook .views .select > div ul li.active {
+    background: rgba(0, 0, 0, 0.5);
+    margin: -1px -10px;
+    text-align: center;
+}
+.main-component .channel-status .facebook .views .data {
+    text-align: center;
+    margin: 3em 0;
+}
+.main-component .channel-status .facebook .views h1 {
+    font-weight: 100;
+}
+.main-component .channel-status .facebook .views .visual .ct-label {
+    color: #fff;
+}
+.main-component .channel-status .facebook .views .visual .ct-line {
+    stroke: #fff;
+}
+.main-component .channel-status .facebook .views .visual .ct-point {
+    stroke: #ffeb3b;
+}
+.main-component .channel-status .facebook .impressions {
+    flex: 1;
+    flex-basis: 38%;
+    background: #fff;
+    margin: 1em;
+    padding: 1em;
+    margin-top: -300px;
+    box-sizing: border-box;
+    box-shadow: 0px 5px 50px lightgray;
+}
+.main-component .channel-status .facebook .impressions .title {
+    font-weight: bold;
+}
+.main-component .channel-status .facebook .impressions .visual {
+    margin-top: 2.5em;
+}
+
+
+
+.loader {
+    position: fixed;
+    z-index: 15;
+    background: rgba(255, 255, 255, 0.9);
+    top: 0;
+    left:0;
+    right:0;
+    bottom:0;
+    display: flex;
+}
+.loader div.icon {
+    margin: auto;
+    padding: 10;
+    background: #fff;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 25px;
+}
+
+@keyframes slide {
+    from {
+        transform: scaleY(0)
+    }
+    to {
+        transform: scaleY(1)
+    }
+}
+
+@media screen and (max-width:1200px){
+    .main-component .channel-status .facebook .likes .data .visual {
+        justify-content: flex-end;
+    }
+    .main-component .channel-status .facebook .likes .data .text {
+        justify-content: flex-start;
+        text-align: left;
+    }
+    .navbar .search {
+        flex: 3
+    }
+
+}
+@media screen and (max-width:1000px){
+    .main-component .channel-status .facebook .likes .data{
+        flex-flow: column-reverse;
+        height: 100%;
+    }
+    .main-component .channel-status .facebook .likes .data .visual {
+        margin: auto;
+    }
+    .main-component .channel-status .facebook .publishes .data {
+        flex-flow: column-reverse;
+    }
+    .main-component .channel-status .platforms ul li .text p:nth-child(2) {
+        display: none;
+    }
+    .main-component .channel-status .platforms ul {
+        flex-flow: row wrap;
+    }
+    .main-component .channel-status .platforms ul li {
+        flex-basis: 40%;
+    }
+    .main-component .channel-status .facebook .demography {
+        flex-basis: 100%;
+    }
+    .main-component .channel-status .facebook .views {
+        flex-basis: 100%;
+    }
+    .main-component .channel-status .facebook .impressions {
+        flex-basis: 100%;
+    }
+    .main-component .channel-status .facebook .demography,
+    .main-component .channel-status .facebook .likes,
+    .main-component .channel-status .facebook .views,
+    .main-component .channel-status .facebook .publishes,
+    .main-component .channel-status .facebook .impressions
+    {
+        margin: 10px;
+    }
+}
+
+@media screen and (max-width:800px){
+    .navbar .search {
+        flex: 2
+    }
+    .main-component .channel-status .facebook .likes .tabs ul li {
+        font-size: 11pt;
+    }
+}
+@media screen and (max-width: 700px){
+    .navbar {
+        flex-flow: wrap;
+    }
+    .navbar .search {
+        flex-basis: 100%;
+        order: 3;
+    }
+    .navbar .title {
+        flex-basis: 50%;
+    }
+    .navbar .controls {
+        flex-basis: 10%;
+    }
+    .main-component, .sidebar {
+        padding-top: 150px;
+    }
+    .main-component .channel-status .facebook .likes .tabs ul li {
+        font-size: 10pt;
+    }
+
+}
+@media screen and (max-width: 500px){
+    .main-component {
+        padding-left: 85px;
+    }
+}
+
+

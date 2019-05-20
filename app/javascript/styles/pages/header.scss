@@ -1,0 +1,191 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: #F2F2F2;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: nowrap;
+  background-color: white;
+  justify-content: space-between;
+
+}
+
+.flex-container-start {
+  display: flex;
+  flex-wrap: nowrap;
+  background-color: white;
+  justify-content: flex-start;
+
+}
+
+.flex-container-start a {
+  padding-top: 15px;
+}
+
+.flex-container-end {
+  display: flex;
+  flex-wrap: nowrap;
+  background-color: white;
+  justify-content: flex-end;
+
+}
+
+.flex-container div {
+  background-color: white;
+
+  margin: 10px;
+  text-align: center;
+
+  font-size: 30px;
+}
+
+.partner {
+  border-radius: 25px;
+  color: white;
+  background-color: rgb(189, 153, 75);
+  height: 40px;
+  width: 170px;
+  border: none;
+
+}
+
+.identify {
+  border-radius: 25px;
+  background-color: white;
+  color: blue;
+  height: 40px;
+  width: 120px;
+  border-color: blue;
+
+}
+
+
+#navbar {
+  text-align: center;
+  color: gray;
+  background-color: rgb(245, 245, 245);
+}
+
+#navbar ul {
+  display: inline-block;
+  list-style: none;
+}
+
+* html #navbar ul {
+
+  display: inline;
+}
+
+*+html #navbar ul {
+
+  display: inline;
+}
+
+#navbar li {
+  display: inline;
+}
+
+#navbar a {
+  float: left;
+  text-decoration: none;
+  padding: 0 30px;
+
+}
+
+.side-nav {
+  height: 676px;
+  width: 0%;
+  font-family: sans-serif;
+  position: fixed;
+  z-index: 7;
+  top: 0;
+  left: 0;
+  background-color: #F7F7F7;
+
+  overflow: hidden;
+  padding-top: 150px;
+  transition: 0.5s;
+}
+
+.side-nav a {
+  padding: 10px 10px 10px 30px;
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 16px;
+  display: block;
+  color: #666666;
+  transition: 0.3s;
+  white-space: nowrap;
+}
+
+.side-nav a:hover {
+  color: gray;
+}
+
+.side-nav .btn-close {
+  position: absolute;
+  top: 2.1%;
+  right: 22px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+
+
+
+
+@media (min-width:376px) {
+  .flex-container-start i {
+    display: none;
+
+  }
+
+  .side-nav {
+    display: none;
+
+  }
+}
+
+@media (max-width:375px) {
+  .flex-container {
+
+    flex-direction: column
+  }
+
+  #navbar {
+    display: none;
+  }
+
+  .flex-container-start i {
+    top: 1em;
+  }
+
+  .flex-container a {
+
+    /* left: 50px; */
+    padding-left: 50px;
+    font-family: monospace;
+    padding-top: 0;
+
+
+  }
+
+  .flex-container div {
+    background-color: white;
+    margin: 10px;
+    text-align: center;
+    /* line-height: 75px; */
+    font-size: 30px;
+    margin-left: 30px;
+  }
+}

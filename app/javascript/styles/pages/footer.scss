@@ -1,0 +1,170 @@
+footer {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-left: 20px;
+  margin-right: 40px;
+  color: rgb(102, 102, 102);
+
+}
+
+.product ul {
+
+  display: block;
+  list-style-type: disc;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 0px;
+}
+
+.contact ul {
+  display: block;
+  list-style-type: disc;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 0px;
+}
+
+
+
+.product li {
+
+  list-style-type: none;
+  color: rgb(161, 156, 156);
+  font-size: 13px;
+}
+
+.contact li {
+
+  list-style-type: none;
+  color: rgb(161, 160, 160);
+  font-size: 13px;
+
+}
+
+.Subscribe {
+  position: relative;
+}
+
+.Subscribe input {
+  width: 100%;
+  height: 25px;
+  margin: 0 auto;
+  opacity: 0.5;
+  border: solid 1px #ccc;
+  border-radius: 10px;
+
+}
+
+.ELMADEAL {
+  color: black;
+  font-size: larger;
+}
+
+
+.contact a {
+  text-decoration: none;
+  color: rgb(161, 160, 160);
+}
+
+.product a {
+  text-decoration: none;
+  color: rgb(161, 160, 160);
+}
+
+.fa {
+  justify-content: space-between;
+  color: rgb(14, 7, 100);
+  padding: 5px;
+}
+
+.Subscribe i {
+
+  display: inline-block;
+  right: 3px;
+  bottom: 54px;
+  position: absolute;
+
+}
+
+.copyright {
+  font-style: normal;
+  font-family: sans-serif;
+}
+
+@media only screen and(max-width:375px) {
+
+
+  footer {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 20px;
+    margin-right: 40px;
+    color: white;
+    flex-direction: column;
+    flex-direction: column-reverse;
+  }
+
+  .ELMADEAL {
+    display: none;
+  }
+
+  .contact {
+    display: none;
+  }
+
+  .product {
+    display: none;
+  }
+
+  .Subscribe {
+    position: relative;
+    text-align: center;
+    color: #515356;
+    font-family: sans-serif;
+    font-style: normal;
+    font-weight: 900;
+  }
+
+  .Subscribe i {
+
+    display: inline-block;
+    right: 52px;
+    bottom: 5px;
+    position: absolute;
+  }
+
+}
+
+.followUs {
+  text-align: center;
+  color: #515356;
+  font-family: sans-serif;
+  font-style: normal;
+
+}
+
+.Subscribe input {
+  width: 235px;
+  height: 36px;
+  margin: 0 auto;
+  opacity: 0.5;
+  border: solid 1px #ccc;
+  border-radius: 30px;
+
+
+}
+
+@media only screen and(min-width:376px) {
+  .copyright {
+    display: none;
+  }
+
+}

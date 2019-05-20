@@ -1,0 +1,50 @@
+ <!-- <header></header> -->
+ <div class="header">
+   <div class="flex-container">
+     <div class="flex-container-start">
+      <span class="open-slide  ">
+        <i class="fa fa-bars" href="#" onclick="openSlideMenu()"></i>
+        </span>
+       <a id="title">ELMADEAL</a>
+     </div>
+
+     <div class="flex-container-end">
+       <div> <button class="partner">DEVENIR PARTENAIRE</button></div>
+       <div> <button class="identify">S'IDENTIFIER</button></div>
+     </div>
+   </div>
+ </div>
+ <!-- <nav></nav> -->
+ <nav id="navbar" class="navbar">
+
+   <ul>
+     <li><a href="#"> Massage </a></li>
+     <li><a href="#"> Visage </a></li>
+     <li><a href="#"> Mains et pieds </a></li>
+     <li><a href="#"> EPILATION </a></li>
+     <li><a href="#"> CORPS </a></li>
+     <li><a href="#"> COIFFURE </a></li>
+     <li><a href="#"> HAMMAM / SPA </a></li>
+   </ul>
+
+ </nav>
+ <div id="side-menu" class="side-nav">
+ <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
+ <a href="#"> Massage </a>
+     <a href="#"> Visage </a>
+     <a href="#"> Mains et pieds </a>
+     <a href="#"> EPILATION </a>
+     <a href="#"> CORPS </a>
+     <a href="#"> COIFFURE </a>
+     <a href="#"> HAMMAM / SPA </a>
+</div>
+     <script>
+     function openSlideMenu() {
+       document.getElementById('side-menu').style.width = '175px';
+
+
+     }
+     function closeSlideMenu(){
+       document.getElementById('side-menu').style.width = '0';
+     }
+     </script>

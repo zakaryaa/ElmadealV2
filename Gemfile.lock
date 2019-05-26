@@ -35,6 +35,8 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
+    addressable (2.6.0)
+      public_suffix (>= 2.0.2, < 4.0)
     arel (6.0.4)
     autoprefixer-rails (9.5.1)
       execjs
@@ -44,6 +46,10 @@ GEM
     coderay (1.1.2)
     concurrent-ruby (1.1.5)
     crass (1.0.4)
+    creek (2.4.4)
+      http (~> 4.0)
+      nokogiri (>= 1.7.0)
+      rubyzip (>= 1.0.0)
     debug_inspector (0.0.3)
     devise (4.6.2)
       bcrypt (~> 3.0)
@@ -51,17 +57,28 @@ GEM
       railties (>= 4.1.0, < 6.0)
       responders
       warden (~> 1.2.3)
+    domain_name (0.5.20180417)
+      unf (>= 0.0.5, < 1.0.0)
     dotenv (2.7.2)
     dotenv-rails (2.7.2)
       dotenv (= 2.7.2)
       railties (>= 3.2, < 6.1)
     erubis (2.7.0)
     execjs (2.7.0)
+    faker (1.9.3)
+      i18n (>= 0.7)
     ffi (1.10.0)
-    font-awesome-sass (5.6.1)
-      sassc (>= 1.11)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
+    http (4.1.1)
+      addressable (~> 2.3)
+      http-cookie (~> 1.0)
+      http-form_data (~> 2.0)
+      http_parser.rb (~> 0.6.0)
+    http-cookie (1.0.3)
+      domain_name (~> 0.5)
+    http-form_data (2.1.1)
+    http_parser.rb (0.6.0)
     i18n (0.9.5)
       concurrent-ruby (~> 1.0)
     jbuilder (2.8.0)
@@ -83,7 +100,7 @@ GEM
     nokogiri (1.10.3)
       mini_portile2 (~> 2.4.0)
     orm_adapter (0.5.0)
-    pg (0.21.0)
+    pg (0.20.0)
     pry (0.12.2)
       coderay (~> 1.1.0)
       method_source (~> 0.9.0)
@@ -92,6 +109,7 @@ GEM
       pry (~> 0.10)
     pry-rails (0.3.9)
       pry (>= 0.10.4)
+    public_suffix (3.0.3)
     puma (3.12.1)
     rack (1.6.11)
     rack-proxy (0.6.5)
@@ -132,6 +150,7 @@ GEM
     responders (2.4.1)
       actionpack (>= 4.2.0, < 6.0)
       railties (>= 4.2.0, < 6.0)
+    rubyzip (1.2.3)
     sassc (2.0.1)
       ffi (~> 1.9)
       rake
@@ -163,6 +182,9 @@ GEM
       thread_safe (~> 0.1)
     uglifier (4.1.20)
       execjs (>= 0.3.0, < 3)
+    unf (0.1.4)
+      unf_ext
+    unf_ext (0.0.7.6)
     warden (1.2.7)
       rack (>= 1.0)
     web-console (3.3.0)
@@ -180,12 +202,13 @@ PLATFORMS
 DEPENDENCIES
   autoprefixer-rails
   bundler (~> 1.17.3)
+  creek
   devise
   dotenv-rails
-  font-awesome-sass (~> 5.6.1)
+  faker
   jbuilder (~> 2.0)
   listen (~> 3.0.5)
-  pg (~> 0.21)
+  pg (~> 0.20.0)
   pry-byebug
   pry-rails
   puma

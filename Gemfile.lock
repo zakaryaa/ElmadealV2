@@ -57,12 +57,25 @@ GEM
       railties (>= 4.1.0, < 6.0)
       responders
       warden (~> 1.2.3)
+    devise-jwt (0.5.9)
+      devise (~> 4.0)
+      warden-jwt_auth (~> 0.3.6)
     domain_name (0.5.20180417)
       unf (>= 0.0.5, < 1.0.0)
     dotenv (2.7.2)
     dotenv-rails (2.7.2)
       dotenv (= 2.7.2)
       railties (>= 3.2, < 6.1)
+    dry-auto_inject (0.6.1)
+      dry-container (>= 0.3.4)
+    dry-configurable (0.8.3)
+      concurrent-ruby (~> 1.0)
+      dry-core (~> 0.4, >= 0.4.7)
+    dry-container (0.7.0)
+      concurrent-ruby (~> 1.0)
+      dry-configurable (~> 0.1, >= 0.1.3)
+    dry-core (0.4.7)
+      concurrent-ruby (~> 1.0)
     erubis (2.7.0)
     execjs (2.7.0)
     faker (1.9.3)
@@ -84,6 +97,7 @@ GEM
     jbuilder (2.8.0)
       activesupport (>= 4.2.0)
       multi_json (>= 1.2)
+    jwt (2.2.1)
     listen (3.0.8)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
@@ -187,6 +201,11 @@ GEM
     unf_ext (0.0.7.6)
     warden (1.2.7)
       rack (>= 1.0)
+    warden-jwt_auth (0.3.6)
+      dry-auto_inject (~> 0.6)
+      dry-configurable (~> 0.8)
+      jwt (~> 2.1)
+      warden (~> 1.2)
     web-console (3.3.0)
       activemodel (>= 4.2)
       debug_inspector
@@ -204,6 +223,7 @@ DEPENDENCIES
   bundler (~> 1.17.3)
   creek
   devise
+  devise-jwt (~> 0.5.9)
   dotenv-rails
   faker
   jbuilder (~> 2.0)

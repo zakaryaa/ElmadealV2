@@ -4,7 +4,7 @@ class CreateServices < ActiveRecord::Migration
 
       t.string :name
       t.text :description
-      t.datetime :duration
+      t.integer :duration
       t.string :category
       t.float :price_cents
       t.references :salon, foreign_key: true

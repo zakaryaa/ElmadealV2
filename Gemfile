@@ -4,6 +4,7 @@ ruby '2.5.1'
 
 gem 'devise'
 gem 'jbuilder', '~> 2.0'
+gem 'devise-jwt', '~> 0.5.9'
 gem 'pg', '~> 0.20.0'
 gem 'puma'
 gem 'rails', '4.2.10'

@@ -3,6 +3,7 @@ class Service < ActiveRecord::Base
   has_many :appointments, dependent: :destroy
   has_many :working_hours, dependent: :destroy
   has_many :users, through: :appointments
+  has_many :promotions
 
   # virtual attribute
   attr_accessor :appointment_count

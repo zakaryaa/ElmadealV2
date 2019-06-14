@@ -1,4 +1,2 @@
-class Api::V1::BaseApiController < ActionController::Api
-  include ActionController::MimeResponds
-  respond_to :json
+class Api::V1::BaseApiController < ApplicationController
 end

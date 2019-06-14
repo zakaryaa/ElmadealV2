@@ -3,9 +3,20 @@ class Api::V1::AppointmentsController < Api::V1::BaseApiController
   before_action :set_customer, only: [:create,:update]
 
   # GET /api/v1/salons/2/appointments
+  # GET /api/v1/appointments
   def index
-    @appointments = Salon.find(params[:salon_id]).appointments
-    render 'api/v1/index.json.jbuilder'
+    if params[:salon_id].nil?
+      unless current_user.nil?
+        user_id = current_user.id
+        @appointments = current_user.appointments
+      else
+        @appointments = []
+      end
+    else
+
+    end
+    render 'api/v1/appointments/index.json.jbuilder'
+
   end
 
   # GET /api/v1/salons/2/appointments/2

@@ -3,9 +3,9 @@ class PagesController < ApplicationController
 
   end
 
-  def salondata
+  def salons
     @user = User.first
-    render 'pages/salondata.json.jbuilder'
+    render 'pages/index.json.jbuilder'
   end
 
 end

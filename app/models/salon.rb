@@ -3,6 +3,8 @@ class Salon < ActiveRecord::Base
   has_many :opening_hours, dependent: :destroy
   has_many :photos, dependent: :destroy
   has_many :roles
+  has_many :ratings
+
 
   has_many :appointments, through: :services
   has_many :users, through: :roles

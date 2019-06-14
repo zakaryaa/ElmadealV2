@@ -1,4 +1,4 @@
-class OpeningHour < ActiveRecord::Base
+ class OpeningHour < ActiveRecord::Base
   belongs_to :salon
 
   validates :day, :start_hour, :end_hour, :salon, presence: true
@@ -7,7 +7,7 @@ class OpeningHour < ActiveRecord::Base
 
   private
 
-  def validates_hours
-    errors.add(:end_hour, "must be after the start shift") if end_hour <= start_hour
-  end
+  #def validates_hours
+   # errors.add(:end_hour, "must be after the start shift") if end_hour <= start_hour
+  #end
 end

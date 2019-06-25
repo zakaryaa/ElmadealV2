@@ -1,0 +1,1 @@
+json.percentage @Promotion.percentage.to_s + "%"

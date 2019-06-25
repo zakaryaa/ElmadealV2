@@ -1,4 +1,4 @@
-class CreateSalons < ActiveRecord::Migration
+class CreateSalons < ActiveRecord::Migration[5.2]
   def change
     create_table :salons do |t|
 

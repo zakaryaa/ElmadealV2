@@ -4,12 +4,16 @@ class Api::V1::ServicesController < Api::V1::BaseApiController
   # GET /api/v1/services
   def index
     @services  = Salon.find(params[:salon_id]).services
-    render 'api/v1/index.json.jbuilder'
+    render 'api/v1/services/index.json.jbuilder'
   end
 
   # GET /api/v1/services/1
   def show
-    render 'api/v1/show.json.jbuilder'
+    @promotion_price =  @service.price_cents *  (@service.promotions.first.percentage / 100)
+    @promotion_percentage = @service.promotions.first.percentage
+    @service_price = (price_cents-promotion_price)
+    render 'api/v1/services/show.json.jbuilder'
+
   end
 
   # POST /api/v1/services
@@ -55,3 +59,4 @@ class Api::V1::ServicesController < Api::V1::BaseApiController
       params.fetch(:service, {})
     end
 end
+

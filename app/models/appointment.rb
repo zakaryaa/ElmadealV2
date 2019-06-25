@@ -12,7 +12,7 @@ class Appointment < ActiveRecord::Base
 
   belongs_to :service
 
-  validates :start_appointment, :end_appointment, :customer_id, :service, presence: true
+  validates :start_appointments, :end_appointments, :customer_id, :service, presence: true
 
 
 end

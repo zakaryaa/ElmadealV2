@@ -1,1 +1,1 @@
-json.comment @Rating.comment
+json.comment rating.comment

@@ -1,1 +1,2 @@
-json.role @Role.role
+json.role @role.role
+json.id @role.id

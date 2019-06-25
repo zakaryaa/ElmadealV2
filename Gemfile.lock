@@ -237,7 +237,7 @@ DEPENDENCIES
   creek
   devise
   devise-jwt (~> 0.5.9)
-  dotenv-rails
+  dotenv-rails (~> 2.7, >= 2.7.2)
   faker
   jbuilder (~> 2.0)
   listen (~> 3.0.5)

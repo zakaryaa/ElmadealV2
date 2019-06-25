@@ -7,6 +7,7 @@ class Api::V1::OpeningHoursController < Api::V1::BaseApiController
   end
   def show
     @Opening_hour =OpeningHour.find(params[:id])
+    render 'api/v1/opening_hours/show.json.jbuilder'
 
   end
 end

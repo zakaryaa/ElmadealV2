@@ -34,6 +34,7 @@ openingHours = xlsData.sheets[2]
 services = xlsData.sheets[3]
 roles = xlsData.sheets[4]
 photos = xlsData.sheets[5]
+
 puts "✅ success Reading sheets "
 
 
@@ -155,6 +156,8 @@ puts "✅ success Creating photos from spread sheet "
   end
 end
 puts "✅ success setting default pictures for picture-less salons..."
+
+
 
 
 

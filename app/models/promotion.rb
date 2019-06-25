@@ -1,3 +1,3 @@
 class Promotion < ActiveRecord::Base
-  belongs_to :services
+  belongs_to :service
 end
